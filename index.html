@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://imgs.search.brave.com/qmK-3dnNvQ7byZ31B-pbxfuXjH8ptvSkbHMSVDLWJww/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2l0eXBuZy5jb20v/cHVibGljL3VwbG9h/ZHMvcHJldmlldy9o/ZC13aGl0ZS1jeWJl/cnB1bmstMjA3Ny1n/YW1lLWxvZ28tcG5n/LTcwMTc1MTY5NDc4/NzQyMXBsc3NlcjVq/c3IucG5nP3Y9MjAy/NTAzMzExNA" />
+    <title>Cyberpunk 2077</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      @keyframes glitch {
+        0% { transform: translate(0) }
+        20% { transform: translate(-2px, 2px) }
+        40% { transform: translate(-2px, -2px) }
+        60% { transform: translate(2px, 2px) }
+        80% { transform: translate(2px, -2px) }
+        100% { transform: translate(0) }
+      }
+      .glitch-hover:hover {
+        animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+        text-shadow: 0 0 10px rgba(252, 238, 10, 0.8);
+      }
+      .cyberpunk-border {
+        position: relative;
+        border: 1px solid #fcee0a;
+      }
+      .cyberpunk-border:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: -5px;
+        width: 10px;
+        height: 10px;
+        background-color: #fcee0a;
+        z-index: 1;
+      }
+      .cyberpunk-border:before {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: -5px;
+        width: 10px;
+        height: 10px;
+        background-color: #fcee0a;
+        z-index: 1;
+      }
+      .neon-text {
+        text-shadow: 0 0 5px rgba(252, 238, 10, 0.7), 0 0 10px rgba(252, 238, 10, 0.5);
+      }
+      .cyber-gradient {
+        background: linear-gradient(90deg, #ff0055 0%, #fcee0a 50%, #0066ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="font-['Rajdhani']">
+    <div class="main w-full bg-gradient-to-b from-black to-[#0a0a14]">
+      <!-- Animated Glitch Overlay -->
+      <div class="fixed inset-0 pointer-events-none z-10 opacity-10">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise.png')] mix-blend-overlay"></div>
+      </div>
+      
+      <!-- Header with Animated Nav -->
+      <nav class="w-full top-0 left-0 px-6 md:px-10 py-5 flex justify-between items-center z-50 bg-black bg-opacity-80 backdrop-blur-md border-b border-[#fcee0a33]">
+        <img class="w-[120px] md:w-[160px] mix-blend-lighten contrast-200 saturate-200 hover:scale-105 transition-all duration-300" 
+        src="https://www.pngall.com/wp-content/uploads/4/Cyberpunk-2077-Logo-Transparent.png" alt="">
+        <div class="hidden md:flex gap-5 items-center">
+          <a href="#" class="tracking-tight text-white hover:text-[#fcee0a] transition-all text-lg uppercase tracking-widest glitch-hover">Home</a>
+          <a href="#" class="tracking-tight text-white hover:text-[#fcee0a] transition-all text-lg uppercase tracking-widest glitch-hover">Games</a>
+          <a href="#" class="tracking-tight text-white hover:text-[#fcee0a] transition-all text-lg uppercase tracking-widest glitch-hover">Characters</a>
+          <a href="#" class="tracking-tight text-white hover:text-[#fcee0a] transition-all text-lg uppercase tracking-widest glitch-hover">News</a>
+          <a href="#" class="tracking-tight text-white hover:text-[#fcee0a] transition-all text-lg uppercase tracking-widest glitch-hover">Community</a>
+          <button class="px-5 py-2 bg-[#fcee0a] hover:bg-[#fff000] text-black text-sm uppercase tracking-widest transition-all relative overflow-hidden group">
+            <span class="relative z-10">Buy Now</span>
+            <span class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+          </button>
+        </div>
+        <button class="md:hidden text-[#fcee0a] text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      
+      <!-- Hero Section with 3D Model -->
+      <div class="w-full h-[150vh] overflow-hidden relative pt-20">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 z-0"></div>
+        <div class="absolute top-1/3 left-10 md:left-20 z-20 max-w-xl">
+          <h1 class="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight">ENTER THE WORLD OF <span class="cyber-gradient font-extrabold">CYBERPUNK</span></h1>
+          <p class="text-gray-300 text-lg md:text-xl mb-8">Experience the dark future of 2077. Become a cyberpunk, an urban mercenary equipped with cybernetic enhancements.</p>
+          <div class="flex gap-4">
+            <button class="px-6 py-3 bg-[#fcee0a] hover:bg-white text-black text-sm uppercase tracking-widest transition-all font-bold relative overflow-hidden group cyberpunk-border">
+              <span class="relative z-10">Play Now</span>
+              <span class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+            </button>
+            <button class="px-6 py-3 bg-transparent border border-[#fcee0a] text-[#fcee0a] hover:bg-[#fcee0a20] text-sm uppercase tracking-widest transition-all font-bold">
+              Watch Trailer <i class="fas fa-play ml-2"></i>
+            </button>
+          </div>
+        </div>
+        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-lighten contrast-200 saturate-200 opacity-20 w-[80%] max-w-3xl z-20" 
+        src="https://www.pngall.com/wp-content/uploads/4/Cyberpunk-2077-Logo-Transparent.png" alt="Cyberpunk 2077 Logo">
+        <canvas id="canvas" class="relative z-10"></canvas>
+        
+        <!-- Animated scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-pulse">
+          <span class="text-[#fcee0a] text-sm uppercase tracking-widest mb-2">Scroll Down</span>
+          <i class="fas fa-chevron-down text-[#fcee0a]"></i>
+        </div>
+      </div>
+      
+      <!-- About Us Section with Animated Elements -->
+      <section class="w-full bg-black text-white py-20 px-6 md:px-10 relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#fcee0a10] to-transparent"></div>
+        <div class="max-w-6xl mx-auto relative">
+          <div class="absolute -top-10 left-0 w-20 h-20 border-t-2 border-l-2 border-[#fcee0a] opacity-50"></div>
+          <h2 class="text-4xl font-bold mb-8 text-[#fcee0a] uppercase tracking-wider neon-text">About Cyberpunk 2077</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="transform hover:translate-x-2 transition-all duration-500">
+              <p class="text-lg mb-6 leading-relaxed">Cyberpunk 2077 is an open-world, action-adventure RPG set in Night City, a megalopolis obsessed with power, glamour and body modification.</p>
+              <p class="text-lg mb-6 leading-relaxed">You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character's cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</p>
+              <button class="px-6 py-3 bg-[#fcee0a] hover:bg-[#fff000] text-black text-sm uppercase tracking-widest transition-all group relative overflow-hidden">
+                <span class="relative z-10 group-hover:text-black transition-colors">Learn More</span>
+                <span class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+              </button>
+            </div>
+            <div class="bg-[#111] p-8 rounded-lg cyberpunk-border relative transform hover:-translate-y-2 transition-all duration-500">
+              <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-[#fcee0a] text-black px-4 py-1 text-xs uppercase tracking-wider font-bold">Official</div>
+              <h3 class="text-2xl font-bold mb-4 text-[#fcee0a]">CD PROJEKT RED</h3>
+              <p class="text-lg mb-4 leading-relaxed">Established in 2002, located in Warsaw (HQ), Kraków and Wrocław, Poland, CD PROJEKT RED was born out of raw enthusiasm for video games.</p>
+              <p class="text-lg leading-relaxed">The studio's founders: Michał Kiciński and Marcin Iwiński, both pioneers in video game distribution in Poland in the 90s, were ready to take on the challenge of developing their own games.</p>
+              <div class="mt-6 flex gap-4">
+                <a href="#" class="text-[#fcee0a] hover:text-white transition-all"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-[#fcee0a] hover:text-white transition-all"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="text-[#fcee0a] hover:text-white transition-all"><i class="fab fa-instagram text-xl"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 right-0 w-20 h-20 border-b-2 border-r-2 border-[#fcee0a] opacity-50"></div>
+        </div>
+      </section>
+      
+      <!-- Welcome to Dark Future Section with Parallax -->
+      <section class="w-full bg-[#111] text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#ff005555] to-[#0066ff55] opacity-20"></div>
+        <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+          <h2 class="text-5xl font-bold mb-10 text-center uppercase tracking-widest">Welcome to the <span class="text-[#fcee0a] neon-text">Dark Future</span></h2>
+          <p class="text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">In 2077, America is in pieces. Megacorporations control life in all its aspects from the top floors of their fortresses. Down below, drug-pushing gangs, tech hustlers, and illegal braindance slingers run the streets.</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-[#fcee0a] hover:bg-opacity-80 transition-all transform hover:scale-105 duration-300 group relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#fcee0a20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <h3 class="text-2xl font-bold mb-3 text-[#fcee0a] relative z-10">Night City</h3>
+              <p class="mb-4 relative z-10">A megalopolis that offers violence and oppression, as well as opportunity and glamour.</p>
+              <button class="text-[#fcee0a] hover:text-white transition-all uppercase tracking-wider text-sm group-hover:pl-2 duration-300 relative z-10 flex items-center">
+                Explore <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+              </button>
+            </div>
+            <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-[#fcee0a] hover:bg-opacity-80 transition-all transform hover:scale-105 duration-300 group relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#fcee0a20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <h3 class="text-2xl font-bold mb-3 text-[#fcee0a] relative z-10">Corporations</h3>
+              <p class="mb-4 relative z-10">Ruthless megacorps that control every aspect of life through money, violence, and technology.</p>
+              <button class="text-[#fcee0a] hover:text-white transition-all uppercase tracking-wider text-sm group-hover:pl-2 duration-300 relative z-10 flex items-center">
+                Discover <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+              </button>
+            </div>
+            <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-[#fcee0a] hover:bg-opacity-80 transition-all transform hover:scale-105 duration-300 group relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#fcee0a20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <h3 class="text-2xl font-bold mb-3 text-[#fcee0a] relative z-10">The Edge</h3>
+              <p class="mb-4 relative z-10">Live on the edge, where death and glory await those brave enough to seek them.</p>
+              <button class="text-[#fcee0a] hover:text-white transition-all uppercase tracking-wider text-sm group-hover:pl-2 duration-300 relative z-10 flex items-center">
+                Experience <i class="fas fa-arrow-right ml-2 group-hover:ml-3 transition-all"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mt-16 text-center">
+            <span class="inline-block px-4 py-1 bg-[#fcee0a] text-black text-xs uppercase tracking-wider font-bold mb-4">Coming Soon</span>
+            <h3 class="text-3xl font-bold mb-6">Phantom Liberty Expansion</h3>
+            <p class="max-w-2xl mx-auto mb-8 text-gray-300">The upcoming spy-thriller expansion for Cyberpunk 2077. Prepare to infiltrate the most dangerous district of Night City.</p>
+            <button class="px-8 py-3 bg-transparent border-2 border-[#fcee0a] text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black text-sm uppercase tracking-widest transition-all font-bold">
+              Pre-order Now
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Characters Section with Hover Effects -->
+      <section class="w-full bg-black py-20 px-6 md:px-10 relative">
+        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#111] to-transparent"></div>
+        <div class="max-w-6xl mx-auto">
+          <div class="flex justify-between items-center mb-12">
+            <h2 class="text-4xl font-bold text-[#fcee0a] uppercase tracking-wider neon-text">Iconic Characters</h2>
+            <div class="hidden md:flex gap-2">
+              <button class="w-10 h-10 rounded-full border border-[#fcee0a] flex items-center justify-center text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black transition-all">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="w-10 h-10 rounded-full border border-[#fcee0a] flex items-center justify-center text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black transition-all">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-[#111] rounded-lg overflow-hidden group relative">
+              <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60"></div>
+              <img src="https://www.cyberpunk.net/build/images/home8/product-cp77@1x-5cf31fe8.jpg" alt="Johnny Silverhand" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-0 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#fcee0a] mb-2 group-hover:text-white transition-colors">Johnny Silverhand</h3>
+                <p class="text-white text-sm mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Rockerboy, war veteran, and Night City legend with a score to settle.</p>
+                <span class="text-xs text-gray-400 uppercase tracking-wider">Played by Keanu Reeves</span>
+              </div>
+            </div>
+            <div class="bg-[#111] rounded-lg overflow-hidden group relative">
+              <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60"></div>
+              <img src="https://www.cyberpunk.net/build/images/home8/product-phantomliberty-final@1x-1080ee25.jpg" alt="Judy Alvarez" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-0 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#fcee0a] mb-2 group-hover:text-white transition-colors">Judy Alvarez</h3>
+                <p class="text-white text-sm mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Braindance technician and editor with strong ideals and technical skills.</p>
+                <span class="text-xs text-gray-400 uppercase tracking-wider">Mox affiliate</span>
+              </div>
+            </div>
+            <div class="bg-[#111] rounded-lg overflow-hidden group relative">
+              <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60"></div>
+              <img src="https://www.cyberpunk.net/build/images/home8/product-edgerunners@1x-6f888a59.jpg" alt="Panam Palmer" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-0 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#fcee0a] mb-2 group-hover:text-white transition-colors">Panam Palmer</h3>
+                <p class="text-white text-sm mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Nomad and skilled mechanic with a strong sense of justice and loyalty.</p>
+                <span class="text-xs text-gray-400 uppercase tracking-wider">Aldecaldo nomad</span>
+              </div>
+            </div>
+            <div class="bg-[#111] rounded-lg overflow-hidden group relative">
+              <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10 opacity-60"></div>
+              <img src="https://www.cyberpunk.net/build/images/home8/product-gear@1x-ec02a9d0.jpg" alt="Goro Takemura" class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-0 transition-transform duration-300">
+                <h3 class="text-xl font-bold text-[#fcee0a] mb-2 group-hover:text-white transition-colors">Goro Takemura</h3>
+                <p class="text-white text-sm mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Former Arasaka bodyguard with unshakeable loyalty and deadly skills.</p>
+                <span class="text-xs text-gray-400 uppercase tracking-wider">Arasaka security</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-10">
+            <button class="px-8 py-3 bg-[#fcee0a] hover:bg-[#fff000] text-black text-sm uppercase tracking-widest transition-all relative overflow-hidden group">
+              <span class="relative z-10">View All Characters</span>
+              <span class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Newsletter Section -->
+      <section class="w-full bg-[#0a0a14] py-16 px-6 md:px-10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#ff005520] to-transparent"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+          <div class="bg-black bg-opacity-70 p-8 rounded-lg border border-[#fcee0a] relative">
+            <div class="absolute -top-5 -right-5 w-10 h-10 bg-[#fcee0a] flex items-center justify-center text-black font-bold">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-3xl font-bold mb-4 text-[#fcee0a] uppercase tracking-wider">Join the Network</h3>
+            <p class="text-white mb-6">Subscribe to our newsletter to receive the latest updates, exclusive content, and special offers directly to your inbox.</p>
+            <div class="flex flex-col md:flex-row gap-4">
+              <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-3 bg-[#111] border border-[#333] text-white focus:outline-none focus:border-[#fcee0a] transition-all">
+              <button class="px-6 py-3 bg-[#fcee0a] hover:bg-white text-black text-sm uppercase tracking-widest transition-all font-bold whitespace-nowrap">
+                Subscribe <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+            <p class="text-gray-400 text-xs mt-4">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Footer with Animated Elements -->
+      <footer class="w-full bg-black text-white pt-16 pb-8 border-t border-[#333] relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5"></div>
+        <div class="max-w-6xl mx-auto px-6 md:px-10 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+              <img class="w-[180px] mb-6 mix-blend-lighten contrast-200 saturate-200 hover:scale-105 transition-all duration-300" 
+              src="https://www.pngall.com/wp-content/uploads/4/Cyberpunk-2077-Logo-Transparent.png" alt="Cyberpunk 2077">
+              <p class="text-sm text-gray-400 mb-4">© 2023 CD PROJEKT S.A. All rights reserved.</p>
+              <p class="text-sm text-gray-400">CD PROJEKT®, Cyberpunk®, Cyberpunk 2077® are registered trademarks of CD PROJEKT S.A.</p>
+              <div class="flex gap-4 mt-6">
+                <a href="#" class="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black transition-all">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black transition-all">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black transition-all">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#222] flex items-center justify-center text-[#fcee0a] hover:bg-[#fcee0a] hover:text-black transition-all">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-[#fcee0a] uppercase tracking-wider font-bold mb-4 pb-2 border-b border-[#333]">Games</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-[#fcee0a]"></i>Cyberpunk 2077</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-[#fcee0a]"></i>The Witcher Series</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-[#fcee0a]"></i>GWENT</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm flex items-center"><i class="fas fa-chevron-right mr-2 text-xs text-[#fcee0a]"></i>Thronebreaker</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-[#fcee0a] uppercase tracking-wider font-bold mb-4 pb-2 border-b border-[#333]">Follow Us</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Facebook</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Twitter</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Instagram</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">YouTube</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Discord</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-[#fcee0a] uppercase tracking-wider font-bold mb-4">Legal</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Terms of Service</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Cookie Policy</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">EULA</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-[#fcee0a] transition-all text-sm">Fan Content Guidelines</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-8 border-t border-[#333] text-center text-xs text-gray-500">
+            <p>Portions of this website are inspired by CD PROJEKT RED. This is a fan-made project for educational purposes only.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
