@@ -1,7 +1,5 @@
 # 🚀 Cyberpunk Gaming Website - Immersive 3D Experience
 
-- Welcome to the Cyberpunk Gaming Website! 🌌✨
-
 ![Screenshot (1238)](https://github.com/user-attachments/assets/4bc55997-99ae-47ec-9380-68ec6a0e7cdb)
 
 ![Screenshot (1241)](https://github.com/user-attachments/assets/ad0e24d9-2faf-44df-ace5-4ecd5880546a)
@@ -9,6 +7,7 @@
 ![Screenshot (1243)](https://github.com/user-attachments/assets/01fb3930-c61a-4be2-b7e2-1ea7028a9af3)
 
 
+- Welcome to the Cyberpunk Gaming Website! 🌌✨
 - This project is a futuristic, immersive, and interactive web experience built using Three.js, GSAP, Vite, and Tailwind CSS.
 - It provides a seamless way to explore high-quality 3D elements within a cutting-edge web application.
 
